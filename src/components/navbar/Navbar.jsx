@@ -33,27 +33,27 @@ export const Navbar = () => {
             {/* Main navbar */}
             <div className={`relative bg-white/95 backdrop-blur-xl border shadow-sm transition-all duration-500 ease-out ${
               scrolled 
-                ? 'rounded-2xl border-gray-200/60 shadow-xl px-4 py-2 scale-95' 
+                ? 'rounded-2xl border-gray-200/60 shadow-xl px-4 lg:px-4 px-6 py-2 lg:py-2 py-2.5 lg:scale-95 scale-100' 
                 : 'rounded-xl border-gray-200/40 px-6 py-2.5 scale-100'
             }`}>
               <div className="flex items-center justify-between gap-8">
                 {/* Logo */}
                 <div className={`flex-shrink-0 transition-transform duration-300 ${
-                  scrolled ? 'scale-90' : 'scale-100'
+                  scrolled ? 'lg:scale-90 scale-100' : 'scale-100'
                 }`}>
                   <Logo />
                 </div>
                 
                 {/* Nav links - hidden on mobile */}
                 <div className={`hidden lg:flex items-center gap-1 flex-1 justify-center transition-all duration-300 ${
-                  scrolled ? 'scale-95 opacity-95' : 'scale-100 opacity-100'
+                  scrolled ? 'lg:scale-95 lg:opacity-95 scale-100 opacity-100' : 'scale-100 opacity-100'
                 }`}>
                   <NavLinks />
                 </div>
                 
                 {/* Auth buttons */}
                 <div className={`flex items-center gap-2 transition-all duration-300 ${
-                  scrolled ? 'scale-95' : 'scale-100'
+                  scrolled ? 'lg:scale-95 scale-100' : 'scale-100'
                 }`}>
                   <AuthButtons />
                   
@@ -76,7 +76,7 @@ export const Navbar = () => {
             {/* Subtle border accent */}
             <div className={`absolute inset-0 rounded-2xl border transition-all duration-500 pointer-events-none ${
               scrolled 
-                ? 'border-indigo-200/30 opacity-100 scale-95' 
+                ? 'border-indigo-200/30 opacity-100 lg:scale-95 scale-100' 
                 : 'border-transparent opacity-0 scale-100'
             }`} />
           </div>
